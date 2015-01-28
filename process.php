@@ -25,5 +25,14 @@ $num_t = 0;
        echo 'Fail ';
      $database = mysql_select_db('EXAM',$link);
      mysql_query('set names gb2312');
-     mysql_query("insert into sel_user(id,title,answer,answer2,answer3,answer4,right_ans,score) values("."\'".{$answers1[0]}.","."\'".{$answers1[1]}.","."\'".{$answers1[2]}.","."\'".{$answers1[3]}.","."\'".{$answers1[4]}.","."\'".{$answers1[5]}.","."\'".{$answers1[6]}.","."\'".{$answers1[7]}."\'".")");
+     echo "This is answers:---->";
+     echo "<hr>"."$answers1[0]"."<hr>";
+     echo "<hr>"."$answers1[1]"."<hr>";
+     echo "<hr>"."$answers1[2]"."<hr>";
+     echo "<hr>"."$answers1[3]"."<hr>";
+     echo "<hr>"."$answers1[4]"."<hr>";
+     echo "<hr>"."$answers1[5]"."<hr>";
+     $sql = "insert into sel_user(id,title,answer,answer2,answer3,answer4,right_ans,score) values('{$answers1[0]}','{$answers1[1]}','{$answers1[2]}','{$answers1[3]}','{$answers1[4]}','{$answers1[5]}','6','7')";
+     //mysql_query("insert into sel_user(id,title,answer,answer2,answer3,answer4,right_ans,score) values('25','i love qiqi','a','bb','cc','dxd','a','5')");
+     mysql_query($sql,$link);
 ?>
