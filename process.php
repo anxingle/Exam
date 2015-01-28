@@ -25,7 +25,7 @@ $num_t = 0;
        echo 'Fail ';
      $database = mysql_select_db('EXAM',$link);
      mysql_query('set names gb2312');
-     // testBysiler
+     // testBysiler   compare to master
      $sql = "insert into sel_user(id,title,answer,answer2,answer3,answer4,right_ans,score) values('{$answers1[0]}','{$answers1[1]}','{$answers1[2]}','{$answers1[3]}','{$answers1[4]}','{$answers1[5]}','6','7')";
      //mysql_query("insert into sel_user(id,title,answer,answer2,answer3,answer4,right_ans,score) values('25','i love qiqi','a','bb','cc','dxd','a','5')");
      mysql_query($sql,$link);
